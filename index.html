@@ -8,6 +8,17 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+      <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" type="text/css" rel="stylesheet"/>
     <title>Portfolio</title>
     <link rel="shortcut icon" href="./img/favicon.png">
   </head>
@@ -22,9 +33,15 @@
     }
     #about{
       padding-top: 4rem;
-      font-family:
+
     }
     #project{
+      padding-top: 5rem;
+    }
+    #skill{
+      padding-top: 5rem;
+    }
+    #experience{
       padding-top: 5rem;
     }
     #contact{
@@ -36,6 +53,9 @@
       font-weight: bold;
       font-family: fantasy;
 
+    }
+    .a-font{
+    font-family: 'Noto Sans', sans-serif;
     }
 
 footer{ /* Keterangan footer sama dengan header */
@@ -49,17 +69,143 @@ footer{ /* Keterangan footer sama dengan header */
 }
 
 
+.timeline {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+}
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 3px;
+  background-color: #eeeeee;
+  left: 50%;
+  margin-left: -1.5px;
+}
+.timeline > li {
+  margin-bottom: 20px;
+  position: relative;
+}
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+.timeline > li:after {
+  clear: both;
+}
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+.timeline > li:after {
+  clear: both;
+}
+.timeline > li > .timeline-panel {
+  width: 46%;
+  float: left;
+  border: 1px solid #d4d4d4;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+}
+.timeline > li > .timeline-panel:before {
+  position: absolute;
+  top: 26px;
+  right: -15px;
+  display: inline-block;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #ccc;
+  border-right: 0 solid #ccc;
+  border-bottom: 15px solid transparent;
+  content: " ";
+}
+.timeline > li > .timeline-panel:after {
+  position: absolute;
+  top: 27px;
+  right: -14px;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #fff;
+  border-right: 0 solid #fff;
+  border-bottom: 14px solid transparent;
+  content: " ";
+}
+.timeline > li > .timeline-badge {
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.4em;
+  text-align: center;
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  margin-left: -25px;
+  background-color: #999999;
+  z-index: 100;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: right;
+}
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+.timeline > li.timeline-inverted > .timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+.timeline-badge.primary {
+  background-color: #2e6da4 !important;
+}
+.timeline-badge.success {
+  background-color: #3f903f !important;
+}
+.timeline-badge.warning {
+  background-color: #f0ad4e !important;
+}
+.timeline-badge.danger {
+  background-color: #d9534f !important;
+}
+.timeline-badge.info {
+  background-color: #5bc0de !important;
+}
+.timeline-title {
+  margin-top: 0;
+  color: inherit;
+}
+.timeline-body > p,
+.timeline-body > ul {
+  margin-bottom: 0;
+}
+.timeline-body > p + p {
+  margin-top: 5px;
+}
+
     </style>
   <body>
 
     <!--- Ini Navbar -->
-
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-warning ">
   <div class="container-fluid">
     <a class="navbar-brand" href=""><b style="font-family: sans-serif;">Web-Portfolio</b></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+       <span class="navbar-toggler-icon"></span>
+     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto" style="font-family: fantasy;">
         <li class="nav-item">
@@ -67,6 +213,9 @@ footer{ /* Keterangan footer sama dengan header */
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#about"><i>About</i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#skill"><i>Skill</i></a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#project"><i>Project</i></a>
@@ -93,7 +242,7 @@ footer{ /* Keterangan footer sama dengan header */
   </div>
 
    <div class="d-flex justify-content-center mt-3">
-    <p class="lead text-white"><b style=" font-family: sans-serif;;">Web Developer | Back End | Student</b></p>
+    <p class="lead text-white"><b style=" font-family: sans-serif;;">Web Developer | Game Developer | Student</b></p>
 </div>
 
 <div class="d-flex justify-content-center mt-3">
@@ -110,24 +259,121 @@ footer{ /* Keterangan footer sama dengan header */
 
 
  <!-- Ini About -->
- <section id="about"  class="mb-5">
+ <section id="about"  class="mt-5 mb-5">
    <h2 class="text-center mt-3" style="font-family: Candara;">About Me</h2>
    <div class="row mt-5">
 
+     <div class="col-md-1"></div>
+
+     <div class="col-md-4 mt-4">
+       <div class="container-sm">
+         <div class="shadow p-3 mb-5 bg-body rounded">
+         <div class="table-responsive service">
+
+       <div class="card">
+  <div class="card-body">
+    <p  class="text-center" style="font-family: sans-serif; font-weight: bold;">&nbsp;&nbsp;&nbsp; Hai, Nama Saya Faiz Nurullah, Saya Lahir Di Cirebon Pada Tanggal 22 Maret 2004, Hobby Saya Belajar Dan Ngoding, Dan Saya Ingin Menjadi Seorang Software Developer.</p>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+
+
      <div class="col-md-2"></div>
 
-     <div class="col-md-3 mt-4">
-
-       <p  style="font-family: sans-serif; font-weight: bold;" >&nbsp;&nbsp;&nbsp;Hello, My Name Is Faiz Nurullah, I'am Student Of High School at Sman 1 Babakan. I'am a Web Developer Which Works With Php And Game Developer,</p>
-     </div>
-
-     <div class="col-md-2"></div>
-
-          <div class="col-md-3 mt-4">
-            <p style="font-family: sans-serif; font-weight: bold;" >&nbsp;&nbsp;&nbsp;Hi, I was born in Cirebon, West Java, Indonesia on March 22, 2004.</p>
+          <div class="col-md-4 mt-4">
+            <div class="container-sm">
+                   <div class="shadow p-3 mb-5 bg-body rounded">
+              <div class="table-responsive service">
+            <div class="card">
+       <div class="card-body">
+            <p  class="text-center"  style="font-family: sans-serif; font-weight: bold;">&nbsp;Saya Belajar Dunia IT Sejak Di Bangku Sekolah Menengah Pertama.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
           </div>
 
-           <div class="col-md-2"></div>
+           <div class="col-md-1"></div>
+
+         </div>
+
+
+<div class="row mt-5">
+
+   <div class="col-md-2"></div>
+
+
+<div class="col-md-8">
+
+    <ul class="timeline">
+        <li>
+          <div class="timeline-badge danger"><i class="glyphicon glyphicon-check"></i></div>
+          <div class="timeline-panel">
+            <div class="card">
+
+              <img src="./img/sd.png" class="card-img-top" alt="Sekolah Dasar">
+
+              <div class="card-body">
+                <h5 class="card-title a-font"><b>SDN 1 GEBANG</b></h5>
+                <p class="card-text a-font">2011-2016</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-badge primary"><i class="glyphicon glyphicon-credit-card"></i></div>
+          <div class="timeline-panel">
+            <div class="card">
+
+              <img src="./img/smp.png" class="card-img-top" alt="SMP">
+
+              <div class="card-body">
+                <h5 class="card-title a-font"><b>SMPN 1 GEBANG</b></h5>
+                <p class="card-text a-font">2017-2019</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge info"><i class="glyphicon glyphicon-credit-card"></i></div>
+          <div class="timeline-panel">
+            <div class="card">
+
+              <img src="./img/sma.jpg" class="card-img-top" alt="SMA">
+
+              <div class="card-body">
+                <h5 class="card-title a-font"><b>SMAN 1 BABAKAN</b></h5>
+                <p class="card-text a-font">2020-2022</p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="timeline-inverted">
+          <div class="timeline-badge warning"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Universitas</h4>
+            </div>
+            <div class="timeline-body">
+              <p>Cooming Soon...</p>
+            </div>
+          </div>
+        </li>
+    </ul>
+
+</div>
+
+   <div class="col-md-2"></div>
+
+  </div>
+
 
 
   </div>
@@ -135,58 +381,305 @@ footer{ /* Keterangan footer sama dengan header */
   <!-- Ini Akhir About -->
 
 
+  <!-- Ini Skill -->
+ <section id="skill"  class="mt-5 mb-5">
+  <h2 class="text-center mt-3" style="font-family: Candara;">Skill Me</h2>
+
+     <div class="row mt-5">
+
+
+
+       <div class="col-md-4 mt-4">
+         <div class="container-sm">
+           <div class="shadow-lg p-3 mb-5 bg-body rounded">
+           <div class="table-responsive service">
+
+
+
+         <div class="card">
+    <div class="card-body">
+   <p class="text-center"><img src="./img/css.png" width="64px" height="72px"></p>
+   <p  class="text-center"><b>Learn Since 2019</b></p>
+
+        </div>
+  </div>
+
+  </div>
+  </div>
+</div>
+             </div>
+
+
+
+
+             <div class="col-md-4 mt-4">
+               <div class="container-sm">
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                 <div class="table-responsive service">
+
+               <div class="card">
+          <div class="card-body">
+
+            <p class="text-center"><img src="./img/mysql.png" width="80px" height="64px"></p>
+            <p  class="text-center"><b>Learn Since 2020</b></p>
+
+
+              </div>
+            </div>
+        </div>
+
+        </div>
+        </div>
+
+                   </div>
+
+
+
+
+                   <div class="col-md-4 mt-4">
+                     <div class="container-sm">
+                          <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                       <div class="table-responsive service">
+
+                     <div class="card">
+                <div class="card-body">
+
+                  <p class="text-center"><img src="./img/php.png" width="82px" height="65px"></p>
+                  <p  class="text-center"><b>Learn Since 2020</b></p>
+
+
+                    </div>
+              </div>
+</div>
+              </div>
+              </div>
+
+                         </div>
+
+
+
+
+
+
+
+</div>
+
+
+
+<div class="row mt-5">
+
+
+
+  <div class="col-md-4 mt-4">
+    <div class="container-sm">
+         <div class="shadow-lg p-3 mb-5 bg-body rounded">
+      <div class="table-responsive service">
+
+    <div class="card">
+<div class="card-body">
+
+
+  <p class="text-center"><img src="./img/bootstrap.png" width="76px" height="64px"></p>
+  <p  class="text-center"><b>Learn Since 2019</b></p>
+
+   </div>
+</div>
+</div>
+</div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="col-md-4 mt-4">
+          <div class="container-sm">
+               <div class="shadow-lg p-3 mb-5 bg-body rounded">
+            <div class="table-responsive service">
+
+          <div class="card">
+     <div class="card-body">
+
+       <p class="text-center"><img src="./img/construct.png" width="72px" height="72px"></p>
+       <p  class="text-center"><b>Learn Since 2020</b></p>
+
+
+         </div>
+   </div>
+</div>
+   </div>
+   </div>
+
+              </div>
+
+
+
+
+              <div class="col-md-4 mt-4">
+                <div class="container-sm">
+                     <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                  <div class="table-responsive service">
+
+                <div class="card">
+           <div class="card-body">
+
+             <p class="text-center"><img src="./img/figma.png" width="64px" height="72px"></p>
+             <p  class="text-center"><b>Learn Since 2021</b></p>
+
+
+               </div>
+         </div>
+</div>
+         </div>
+         </div>
+
+                    </div>
+
+
+
+
+
+
+
+</div>
+
+</section>
+  <!-- Ini Akhir Skill -->
+
+
   <!-- Ini Project -->
 
-  <section id="project" class="mt-5">
-     <h2 class="text-center mt-5" style="font-family: Candara;">My Projects</h2>
+  <section id="project" class="mt-5 mb-5">
+     <h2 class="text-center mt-5" style="font-family: Candara;">Projects Me</h2>
 
      <div class="row">
 
        <div class="d-flex justify-content-center mt-5">
        <div class="col-md-8">
 
-         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="./img/inv.png" class="d-block w-100" alt="Inventory Barang">
-    </div>
-    <div class="carousel-item">
-      <img src="./img/E-Izin.png" class="d-block w-100" alt="E-Izin">
-    </div>
-    <div class="carousel-item">
-      <img src="./img/cashflow.png" class="d-block w-100" alt="Cashflow">
-    </div>
-    <div class="carousel-item">
-      <img src="./img/laundry1.png" class="d-block w-100" alt="Laundry Native">
-    </div>
-    <div class="carousel-item">
-      <img src="./img/ss_walink1.png" class="d-block w-100" alt="Walink">
-    </div>
-    <div class="carousel-item">
-      <img src="./img/my_linktree.png" class="d-block w-100" alt="My-Linktree">
-    </div>
-    <div class="carousel-item">
-      <img src="./img/ss1.png" class="d-block w-100" alt="Ingfo-Covid">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+
+         <div class="row row-cols-1 row-cols-md-2 g-4">
+
+           <div class="col">
+             <div class="container-sm">
+               <div class="shadow p-3 mb-5 bg-body rounded">
+               <div class="table-responsive service">
+             <div class="card">
+                   <a href="./img/inv.png" data-lightbox="gallery-mf">
+               <img src="./img/inv.png" class="card-img-top" alt="Inventory">
+             </a>
+               <div class="card-body">
+                 <h5 class="card-title a-font"><b>Inventory Barang</b></h5>
+                 <p class="card-text a-font">Aplikasi Inventory Barang Berbasis Web Yang Di Bangun Menggunakan Bahasa Pemrogramman PHP</p>
+                 <a href="https://github.com/Faiznurullah/Inventory-Barang"><button type="button" class="btn btn-info text-white">Read More</button></a>
+               </div>
+             </div>
+           </div>
+         </div>
+         </div>
+           </div>
+
+           <div class="col">
+             <div class="container-sm">
+               <div class="shadow p-3 mb-5 bg-body rounded">
+               <div class="table-responsive service">
+             <div class="card">
+                <a href="./img/cashflow.png" data-lightbox="gallery-mf">
+               <img src="./img/cashflow.png" class="card-img-top" alt="Cashflow">
+             </a>
+               <div class="card-body">
+                 <h5 class="card-title a-font"><b>Cash Flow</b></h5>
+                 <p class="card-text a-font">Aplikasi Kas Keuangan Berbasis Web Yang Di Bangun Menggunakan Bahasa Pemrogramman PHP</p><br>
+                  <a href="https://github.com/Faiznurullah/cash_flow"><button type="button" class="btn btn-info text-white mt-1">Read More</button></a>
+               </div>
+             </div>
+           </div>
+         </div>
+         </div>
+           </div>
+
+           <div class="col">
+             <div class="container-sm">
+               <div class="shadow p-3 mb-5 bg-body rounded">
+               <div class="table-responsive service">
+             <div class="card">
+                 <a href="./img/E-Izin.png" data-lightbox="gallery-mf">
+               <img src="./img/E-Izin.png" class="card-img-top" alt="E-Izin">
+             </a>
+               <div class="card-body">
+                 <h5 class="card-title a-font"><b>E-Izin</b></h5>
+                 <p class="card-text a-font">Aplikasi Izin Siswa Berbasis Web Yang Di Bangun Menggunakan Bahasa Pemrogramman PHP</p>
+                 <a href="https://github.com/Faiznurullah/E-Izin_V2"><button type="button" class="btn btn-info text-white mt-1">Read More</button></a>
+               </div>
+             </div>
+           </div>
+         </div>
+         </div>
+           </div>
+
+           <div class="col">
+             <div class="container-sm">
+               <div class="shadow p-3 mb-5 bg-body rounded">
+               <div class="table-responsive service">
+             <div class="card">
+                <a href="./img/laundry1.png" data-lightbox="gallery-mf">
+               <img src="./img/laundry1.png" class="card-img-top" alt="Laundry">
+             </a>
+               <div class="card-body">
+                 <h5 class="card-title a-font"><b>Laundry Native</b></h5>
+                 <p class="card-text a-font">Aplikasi Laundry Berbasis Web Yang Di Bangun Menggunakan Bahasa Pemrogramman PHP</p>
+                 <a href="https://github.com/Faiznurullah/Laundry_Native"><button type="button" class="btn btn-info text-white mt-1">Read More</button></a>
+               </div>
+             </div>
+           </div>
+         </div>
+         </div>
+           </div>
+
+
+           <div class="col">
+             <div class="container-sm">
+               <div class="shadow p-3 mb-5 bg-body rounded">
+               <div class="table-responsive service">
+             <div class="card">
+                 <a href="./img/project.jpg" data-lightbox="gallery-mf">
+               <img src="./img/project.jpg" class="card-img-top" alt="Project More">
+             </a>
+               <div class="card-body">
+                 <h5 class="card-title a-font"><b>Project More</b></h5>
+                 <p class="card-text a-font">Kunjungi Github Saya Untuk Melihat Lebih Banyak Project Yang Berhasil Saya Buat</p>
+                 <a href="https://github.com/Faiznurullah/"><button type="button" class="btn btn-info text-white mt-1">Read More</button></a>
+               </div>
+             </div>
+           </div>
+         </div>
+         </div>
+           </div>
+
+
+           <div class="col">
+             <div class="container-sm">
+               <div class="shadow p-3 mb-5 bg-body rounded">
+               <div class="table-responsive service">
+             <div class="card">
+                 <a href="./img/sertifikat.png" data-lightbox="gallery-mf">
+               <img src="./img/sertifikat.png" class="card-img-top pb-2" alt="sertifikat">
+             </a>
+               <div class="card-body">
+                 <h5 class="card-title a-font"><b>Sertifikat Penghargaan</b></h5>
+                 <p class="card-text a-font">Kumpulan Sertifikat Yang Berhasil Saya Dapatkan</p>
+                 <a href="https://drive.google.com/drive/u/0/folders/16VbHTkN17zg2UkYX0q6YYtgB4vg2t4LT"><button type="button" class="btn btn-info text-white mt-1">Read More</button></a>
+               </div>
+             </div>
+           </div>
+          </div>
+          </div>
+           </div>
+
+         </div>
+
+
 
 </div>
 
@@ -197,11 +690,16 @@ footer{ /* Keterangan footer sama dengan header */
     <!-- Ini Akhir Project -->
 
 
+
+
+
 <!-- Ini Contact-->
   <section id="contact" class="mt-5 mb-5">
   <h2 class="text-center mt-5" style="font-family: Candara;">Contact Me</h2>
 
   <div class="container-sm">
+    <div class="shadow p-3 mb-5 bg-body rounded">
+    <div class="table-responsive service">
 
     <!-- Ini Card -->
   <div class="card">
@@ -313,7 +811,8 @@ footer{ /* Keterangan footer sama dengan header */
   </div>
   <!-- Ini Card -->
 
-
+</div>
+</div>
 </div>
 
   </section>
@@ -339,6 +838,7 @@ footer{ /* Keterangan footer sama dengan header */
 
 
     <!-- Optional JavaScript; choose one of the two! -->
+    <script src="./js/bootstrap.min.js"></script>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
