@@ -6,18 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
-      <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
 
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
-
-
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" type="text/css" rel="stylesheet"/>
     <title>Portfolio</title>
     <link rel="shortcut icon" href="./img/favicon.png">
@@ -66,6 +64,26 @@ footer{ /* Keterangan footer sama dengan header */
 	background-color:#cccccc;
 	z-index:2;
 
+}
+
+#scroll-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #DF711B;
+    color: white;
+    cursor: pointer;
+    padding: 15px 19px 15px 19px;
+    border-radius: 100px;
+  }
+
+.cover-fit{
+  object-fit: contain;
 }
 
 
@@ -242,7 +260,7 @@ footer{ /* Keterangan footer sama dengan header */
   </div>
 
    <div class="d-flex justify-content-center mt-3">
-    <p class="lead text-white"><b style=" font-family: sans-serif;;">Web Developer | Game Developer | Student</b></p>
+    <center><p class="lead text-white"><b style=" font-family: sans-serif;">Web Developer | Game Developer | Student</b></p></center>
 </div>
 
 <div class="d-flex justify-content-center mt-3">
@@ -317,7 +335,7 @@ footer{ /* Keterangan footer sama dengan header */
           <div class="timeline-panel">
             <div class="card">
 
-              <img src="./img/sd.png" class="card-img-top" alt="Sekolah Dasar">
+              <img src="./img/sd.png" class="card-img-top cover-fit" alt="Sekolah Dasar" width="330px" height="190px">
 
               <div class="card-body">
                 <h5 class="card-title a-font"><b>SDN 1 GEBANG</b></h5>
@@ -331,7 +349,7 @@ footer{ /* Keterangan footer sama dengan header */
           <div class="timeline-panel">
             <div class="card">
 
-              <img src="./img/smp.png" class="card-img-top" alt="SMP">
+              <img src="./img/smp.png"  class="card-img-top cover-fit" alt="SMP" width="330px" height="190px">
 
               <div class="card-body">
                 <h5 class="card-title a-font"><b>SMPN 1 GEBANG</b></h5>
@@ -345,7 +363,7 @@ footer{ /* Keterangan footer sama dengan header */
           <div class="timeline-panel">
             <div class="card">
 
-              <img src="./img/sma.jpg" class="card-img-top" alt="SMA">
+              <img src="./img/sma.png" class="card-img-top cover-fit" alt="SMA" width="330px" height="190px">
 
               <div class="card-body">
                 <h5 class="card-title a-font"><b>SMAN 1 BABAKAN</b></h5>
@@ -376,7 +394,7 @@ footer{ /* Keterangan footer sama dengan header */
 
 
 
-  </div>
+
   </section>
   <!-- Ini Akhir About -->
 
@@ -708,7 +726,7 @@ footer{ /* Keterangan footer sama dengan header */
     <div class="card-body">
 
    <!-- Ini Row Facebook -->
-      <div class="row">
+      <div class="row mt-4">
 
         <div class="col-md-1">
           <div class="d-flex justify-content-center">
@@ -718,7 +736,9 @@ footer{ /* Keterangan footer sama dengan header */
 
         <div class="col-md-4">
             <div class="d-flex justify-content-center">
-      <p class="mt-2 text-center"><a href="https://web.facebook.com/faiznurullah66" class="link-sos pl-3">https://web.facebook.com/faiznurullah66</a></p>
+
+      <p class="mt-2 text-center"><a href="https://web.facebook.com/faiznurullah66" class="link-sos pl-3"> <button class="btn btn-primary" type="button"><b>Facebook</b></button></a></p>
+    </div>
     </div>
         </div>
 
@@ -726,7 +746,7 @@ footer{ /* Keterangan footer sama dengan header */
      <!-- Ini Akhir Row Facebook -->
 
   <!-- Ini Row Github -->
-     <div class="row">
+     <div class="row mt-4">
 
        <div class="col-md-1">
          <div class="d-flex justify-content-center">
@@ -736,7 +756,7 @@ footer{ /* Keterangan footer sama dengan header */
 
        <div class="col-md-4">
            <div class="d-flex justify-content-center">
-     <p class="mt-2"> <a href="https://github.com/Faiznurullah" class="link-sos pl-3">https://github.com/Faiznurullah</a></p>
+     <p class="mt-2"> <a href="https://github.com/Faiznurullah" class="link-sos pl-3"><button class="btn btn-secondary" type="button"><b>Github</b></button></a></p>
    </div>
        </div>
 
@@ -745,7 +765,7 @@ footer{ /* Keterangan footer sama dengan header */
 
 
     <!-- Ini Row Gmail -->
-       <div class="row">
+       <div class="row mt-4">
 
          <div class="col-md-1">
            <div class="d-flex justify-content-center">
@@ -755,7 +775,7 @@ footer{ /* Keterangan footer sama dengan header */
 
          <div class="col-md-4">
              <div class="d-flex justify-content-center">
-       <p class="mt-2"> <a href="mailto:Faizn103a@gmail.com" class="link-sos pl-3">Faizn103a@gmail.com</a></p>
+       <p class="mt-2"> <a href="mailto:Faizn103a@gmail.com" class="link-sos pl-3"><button class="btn btn-danger" type="button"><b>Email</b></button></a></p>
      </div>
          </div>
 
@@ -764,7 +784,7 @@ footer{ /* Keterangan footer sama dengan header */
 
 
       <!-- Ini Row Linkedin -->
-         <div class="row">
+         <div class="row mt-4">
 
            <div class="col-md-1">
              <div class="d-flex justify-content-center">
@@ -774,7 +794,7 @@ footer{ /* Keterangan footer sama dengan header */
 
            <div class="col-md-4">
                <div class="d-flex justify-content-center">
-         <p class="mt-2 text-center">  <a href="https://www.linkedin.com/in/faiznurullah/" class="link-sos pl-3">https://www.linkedin.com/in/faiznurullah/</a></p>
+         <p class="mt-2 text-center">  <a href="https://www.linkedin.com/in/faiznurullah/" class="link-sos pl-3"><button class="btn btn-info text-white" type="button"><b>Linkedin</b></button></a></p>
        </div>
            </div>
 
@@ -785,7 +805,7 @@ footer{ /* Keterangan footer sama dengan header */
 
 
         <!-- Ini Row Gmail -->
-           <div class="row">
+           <div class="row mt-4 mb-4">
 
              <div class="col-md-1">
                <div class="d-flex justify-content-center">
@@ -796,7 +816,7 @@ footer{ /* Keterangan footer sama dengan header */
 
              <div class="col-md-4">
                  <div class="d-flex justify-content-center">
-           <p class="mt-2">    <a href="https://api.whatsapp.com/send/?phone=6288806313872&text&app_absent=0" class="link-sos pl-3">https://wa.me/6288806313872</a></p>
+           <p class="mt-2">    <a href="https://api.whatsapp.com/send/?phone=6288806313872&text&app_absent=0" class="link-sos pl-3"><button class="btn btn-success" type="button"><b>Whatsapp</b></button></a></p>
          </div>
              </div>
 
@@ -819,8 +839,6 @@ footer{ /* Keterangan footer sama dengan header */
 <!-- Ini Akhir Contact-->
 
 
-
-
      <!-- Ini Footer -->
 
      <section class="jumbotron jumbotron-fluid" style="background-color: #ffff;">
@@ -836,10 +854,31 @@ footer{ /* Keterangan footer sama dengan header */
 </footer>
      <!-- Ini Akhir Footer -->
 
+     <button onclick="topFunction()" id="scroll-btn" title="Top">&uarr;</button>
 
-   
+     <script>
+     // ketika pengunjung scroll kebawah 20px dari atas dokumen, maka tampilkan tombol scroll-btn
+     window.onscroll = function() {scrollFunction()};
+
+     function scrollFunction() {
+       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+         document.getElementById("scroll-btn").style.display = "block";
+       } else {
+         document.getElementById("scroll-btn").style.display = "none";
+       }
+     }
+
+     // ketika tombol tersebut di klik, maka lakukan scroll keatas laman
+     function topFunction() {
+       document.body.scrollTop = 0;
+       document.documentElement.scrollTop = 0;
+     }
+     </script>
+
+
+
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 
 
   </body>
